@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 국어점수, 수학점수, 과학점수 를 입력받는다. -->
+    <!-- 그리고 3과목의 평균 점수를 출력 한다. -->
+    <!-- 국어점수가 70점 이상이고
+         수학점수가 50점 초과이며 
+         과학점수가 80점 이상이면 
+         화면에 true를 표시한다. 웹페이지 추천
+        점수가 안되면 false  -->
+        <link rel="stylesheet" href="./css/02-02.css">
+        <script>
+            const r = prompt('국어 점수를 입력하세요.') *1
+            alert(`${r}`)
+            const m = prompt('수학 점수를 입력하세요') *1
+            alert(`${m}`)
+            const s = prompt('과학 점수를 입력하세요.') *1
+            alert(`${s}`)
+            alert(`당신의 평균 점수 = ${(r+m+s)/3} 입니다. `)
+            alert(`${r>69 && m>50 && s>79}`)
+
+            let list =''
+            list +=`<table>`
+            list +=`<tr class="b">`
+            list +=`<th>국어</th>`
+            list +=`<th>수학</th>`
+            list +=`<th>과학</th>`
+            list +=`<th>평균</th>`
+            list +=`<th>true/false</th>`
+            list +=`</tr>`
+            list +=`<tr>`
+            list +=`<td>${r}</td>`
+            list +=`<td>${m}</td>`
+            list +=`<td>${s}</td>`
+            list +=`<td>${(r+m+s)/3}</td>`
+            list +=`<td>${r>69 && m>50 && s>79}</td>`
+            list +=`</tr>`
+            list +=`<table>`
+    
+
+            document.write(list)
+
+
+
+        </script>
+</head>
+<body>
+   
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/02-01.css">
+    <!-- //2에서 9까지 중 하나를 입력받아 
+    // 구구단을 페이지에 나타내어라. -->
+    <script>
+        //   2에서 9까지 중 숫자 하나 를 입력받아 
+          const num = prompt(' 2에서 9까지 하나를 입력하세요')*1
+          let list = ''
+              list +=`<table class="a">`
+              list +=`<tr><th>${num}</th><th>X</th><th>1</th><th>${num*1}</th>`
+              list +=`<tr><td>${num}</td><td>X</td><td>2</td><td>${num*2}</td>`
+              list +=`<tr><th>${num}</th><th>X</th><th>3</th><th>${num*3}</th>`
+              list +=`<tr><td>${num}</td><td>X</td><td>4</td><td>${num*4}</td>`
+              list +=`<tr><th>${num}</th><th>X</th><th>5</th><th>${num*5}</th>`
+              list +=`<tr><td>${num}</td><td>X</td><td>6</td><td>${num*6}</td>`
+              list +=`<tr><th>${num}</th><th>X</th><th>7</th><th>${num*7}</th>`
+              list +=`<tr><td>${num}</td><td>X</td><td>8</td><td>${num*8}</td>`
+              list +=`<tr><th>${num}</th><th>X</th><th>9</th><th>${num*9}</th>`
+              list += `</table>`
+        
+
+          document.write(list)
+
+  
+    </script>
+   
+  
+    
+
+</head>
+<body>
+    
+</body>
+</html>
