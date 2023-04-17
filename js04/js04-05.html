@@ -5,26 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<<<<<<< HEAD
-    //다음중 제거하고 싶은 품목을 입력하세요.
-    딸기 바나나 사과 수박 배 키위 복숭아 포도 
-    prompt 에 배라고 입력하면 docyment.write로 웹에 배가 삭제된 나머지 목록이 나타난다.
-    <script>
-        const fru =prompt('다음 중 제거하고 싶은 품목을 입력하세요.,딸기,바나나,사과,수박,배,키위,복숭아,포도')
-        const arr = ['딸기,바나나,사과,수박,배,키위,복숭아,포도']
-
-        if(arr.splice(,)){
-            console.log(arr)
-
-        }
-=======
     <!-- //다음중 제거하고 싶은 품목을 입력하세요.
     딸기 바나나 사과 수박 배 키위 복숭아 포도 
     prompt 에 배라고 입력하면 docyment.write로 웹에 배가 삭제된 나머지 목록이 나타난다. -->
     <script>
         const input =prompt('다음 중 제거하고 싶은 품목을 입력하세요.','딸기,바나나,사과,수박,배,키위,복숭아,포도')
+        const input2 =prompt('다음 중 추가하고 싶은 품목을 입력하세요.','딸기,바나나,사과,수박,배,키위,복숭아,포도')
         const arr = ['딸기','바나나','사과','수박','배','키위','복숭아','포도']
         arr.splice(arr.indexOf(input),1)
+        arr.splice(arr.length-2,0,(input2))
+        
         console.log(arr)
         document.write(`<h1>${arr}</h1>`)
         
@@ -56,7 +46,6 @@
         //     console.log(arr)
 
         // }
->>>>>>> c13286294ed919e201b9fce2c4b65b791b728d50
     </script>
 </head>
 <body>
