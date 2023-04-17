@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤</title>
+    <script>
+        const ran = Math.floor(Math.random()*100)
+        console.log(ran)
+     
+        // const lie = ran > 10 
+        // const rei = ran < 5 || ran <10
+        // const uni = ran < 3 || ran < 5
+        // const reg = ran <2 
+        // console.log('%c',"border:1px solid red; margin:20px; color:blue;font-size:30px;background-color:darkkhaki;")
+        // console.log(lie) 
+        // console.log(rei) 
+        // console.log(uni) 
+        // console.log(reg) 
+      
+
+        if(ran>10){
+            document.write('일반아이템!!!')
+            console.log('%c 일반아이템',"margin:10px; color:beige;font-size:20px;")
+         
+        }
+        if(ran < 5 || ran <10 ){
+            document.write('레어아이템!!!')
+            console.log('%c 레어아이템',"margin:10px; color:green;font-size:20px;")
+        
+        }
+        if( ran < 3 || ran < 5){
+            document.write('유니크아이템!!!')
+            console.log('%c 유니크아이템',"margin:10px; color:purple;font-size:20px;")
+        
+          
+        }
+        if( ran <2 ){
+            document.write('레전드아이템!!!')
+            console.log('%c 레전드아이템',"margin:10px; color:red;font-size:20px;")
+        
+        }
+      
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
