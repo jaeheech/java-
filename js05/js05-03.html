@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/05-03.css">
+    <!-- 한마리의 동물을 입력받아 처음부터 그동물까지만 출력하게하라 -->
+    <script>
+        const input = prompt('강아지, 고양이, 코끼리, 원숭이, 호랑이, 거북이 ,토끼 중 하나를 고르시오.')
+        const arr =['강아지', '고양이', '코끼리', '원숭이', '호랑이', '거북이' ,'토끼' ]
+        for(let i =0; i<arr.length;i++){
+            if(i<=arr.indexOf(input)){
+            console.log(arr[i])
+            document.write("<h1>"+arr[i]+"</h1>")
+            // if(i==arr.indexOf(input))break;
+        }   
+            else{
+                console.log(arr[i])
+                document.write("<h2>"+arr[i]+"</h2>")
+            }
+        }
+       
+        
+      
+       
+     
+        
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>
