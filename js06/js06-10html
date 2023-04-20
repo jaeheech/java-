@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주사위</title>
+    <link rel="stylesheet" href="./css/06-09.css">
+    <script>
+         const per = Math.floor(Math.random()*99)+1
+        let result =''
+        let a=b=c=d=e=f=0
+        const gift = [1,2,3,4,5,6]
+        
+
+        for(let i = 0; i<100000; i++){
+            
+            
+             const ran = Math.floor(Math.random()*6)+1
+           
+            
+           
+            if(ran==1){a+=1}
+            if(ran==2){b+=1}
+            if(ran==3){c+=1}
+            if(ran==4){d+=1}
+            if(ran==5){e+=1}
+            if(ran==6){f+=1} 
+        
+        }
+      
+        
+        //     for (let i = 0; i < gift.length; i++) {
+
+        //         if(sen[i] >= per){
+        //             res = sen[i]
+        //            
+        //         }
+        //         else if (sen[sen.length - 1] < per) {
+        //             res = sen[gift.length - 1]
+        //             
+        //         }
+        //     }
+        // }
+     
+        
+        console.log(a)
+        console.log(b)
+        console.log(c)
+        console.log(d)
+        console.log(e)
+        console.log(f)
+        console.log(a+b+c+d+e+f)
+
+        let list =''
+        list +=`<table>`
+        list +=`<tr>`
+        list +=`<th>번호</th>`
+        list +=`<th>걸린횟수</th>`
+        list +=`<th>확률</th>`
+        list +=`</tr>`
+        list +=`<tr>`
+        list +=`<td>1</td>`
+        list +=`<td>${a}</td>`
+        list +=`<td></td>`
+        list += `</tr>`
+        list += `<tr>`
+        list +=     `<td>2</td>`
+        list +=     `<td>${b}</td>`
+        list +=     `<td></td>`
+        
+        list += `</tr>`
+        list += `<tr>`
+        list +=    `<td>3</td>`
+        list +=     `<td>${c}</td>`
+        list += `</tr>`
+        list += `<tr>`
+        list +=     `<td>4</td>`
+        list +=     `<td>${d}</td>`
+        list += `</tr>`
+        list += `<tr>`
+        list +=     `<td>5</td>`
+        list +=     `<td>${e}</td>`
+        list += `</tr>`
+        list += `<tr>`
+        list +=     `<td>6</td>`
+        list +=     `<td>${f}</td>`
+        list += `</tr>`
+        list += `</table>`
+         document.write(list)
+        
+    </script>
+</head>
+<body>
+   
+    
+</body>
+</html>

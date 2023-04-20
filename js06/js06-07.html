@@ -7,19 +7,49 @@
     <title>가위바위보 게임</title>
     <script>
        
-        const ran = Math.floor(Math.random()*3)
+       const input = prompt('가위,바위,보를 입력하세요.')*1
         const 가위 = 0
         const 바위 = 1
+        const 보 = 2
         // 가위 = 0 바위 = 1 보 = 2
         
 
         for(let i =0; i < 5; i++){
+            const ran = Math.floor(Math.random()*3)
             const input = prompt('가위,바위,보를 입력하세요.')*1
-            if(){
-
+           
+            if(ran===0 ){
+                console.log('비겼습니다.')
             }
-
+            else if(ran===1 ){
+                console.log('비겼습니다.')
+            }
+            else if(ran===2 ){
+                console.log('비겼습니다.')
+            }
+     
+            else if(ran>0  ){
+                console.log('컴퓨터가 이겼습니다.')
+            }
+            else if(ran>1  ){
+                console.log('컴퓨터가 이겼습니다.')
+            }
+            else if(ran>2  ){
+                console.log('컴퓨터가 이겼습니다.')
+            }
+            else if(ran<0){
+                console.log('사용자가 이겼습니다.')
+            }
+            else if(ran<1){
+                console.log('사용자가 이겼습니다.')
+            }
+            else if(ran<2){
+                console.log('사용자가 이겼습니다.')
+            }
+            
+         console.log(ran)
         }
+        
         
         
 
