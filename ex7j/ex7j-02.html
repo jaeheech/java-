@@ -9,8 +9,8 @@
         const array = new Uint8Array(10);
         crypto.getRandomValues(array);
         console.log("오늘자 행운의 수");
-        const ran1 =Math.floor((array[0]/255)*100)
-        const ran2 = array[1]%100+1
+        const ran1 =Math.floor((array[0]/255)*45)
+        const ran2 = array[1]%44+1
         console.log(ran1,ran2)
     </script>
 </head>

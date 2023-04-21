@@ -17,6 +17,7 @@
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       
       <script>
+        console.time('연산시간 측정')
         // 주사위 내코드
         const dice = [0,0,0,0,0,0,0]
 
@@ -29,13 +30,13 @@ dice[ran-1]++
 
 
 for(let j=0;j<dice.length-1;j++){dice[6]+=dice[j]}
-
+console.log(dchart)
 console.log(dice)
 
 const dchart = dice.splice(0,dice.length-1)
 
 
-
+console.timeEnd('')
 
 /*차트그리기 */
 
