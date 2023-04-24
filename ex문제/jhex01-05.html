@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>거스름돈 구하기</title>
+    <script>
+
+        let money = prompt("지갑에 돈이 얼마나 있습니까?") * 1 // 초기머니를 입력받음
+        const menu = {             // 메뉴 배열 담기
+            떡볶이: 300,
+            컵라면: 500,
+            피카츄: 400,
+            용가리: 100,
+            소금구이: 700,
+            콜팝: 1000,
+            오뎅: 400
+        }
+        const size = ["작은컵", "큰컵"]  // 사이즈 배열
+
+        while (true) {  // 메뉴 선정하고 소유머니 차감해주는 작업을 반복해줌
+            const input = prompt("드시고 싶은 메뉴를 입력하세요.") // 원하는 메뉴를 input에 입력받음
+            if (input == "떡볶이") {
+                if (money >= 300) { // 소유머니가 메뉴의 값과 같거나 클 때 아래로 진행
+                    const size_choice = prompt('큰컵과 작은컵 중에 고르세요.') // 사이즈를 입력받음
+                    if (size_choice == size[0]) {         // 위 배열에서 선언한 사이즈와 size_choice로 입력받은 사이즈와 같은 경우 진행
+                        const input_ea = prompt("몇개를 주문하시겠습니까?")*1 // 갯수를 입력받음
+                        console.log("이전머니", money)
+                        console.log(`작은컵 값: ${menu[input]} 갯수: ${input_ea}개`)
+                        if(money>=(menu[input]*input_ea)){ // 소유머니가 고른 메뉴 x 갯수의 값과 같거나 클 때 아래로 진행
+                            money = money - (menu[input]*input_ea) // 소유머니에 고른 메뉴x갯수의 값을 빼줌
+                            console.log(`차감 후 돈:${money}원`)
+                        } else {alert("돈이 부족합니다ㅠㅠ")} break;
+                    } else if (size_choice == size[1]) {
+                        const input_ea = prompt("몇개를 주문하시겠습니까?")*1
+                        if (money >= 500) { // 소유머니가 큰 컵의 값과 같거나 클 때 아래로 진행
+                            console.log("이전머니", money)
+                            console.log(`큰컵 값: ${menu[input]+200} 갯수:${input_ea}개`)
+                            if(money>=(menu[input]*input_ea)){
+                                money = money - ((menu[input]+200)*input_ea)
+                                console.log(`차감후 돈:${money}원`)
+                            } else {("돈이 부족합니다ㅠㅠ")} break;
+                        } else {alert("돈이 부족합니다ㅠㅠ")} break;
+                    }
+                } else { alret("돈이 부족합니다ㅠㅠ") } break;
+            }
+            const order = confirm("추가 주문을 하시겠습니까?") // true or false 값을 받음
+            if (!order) break // false일 경우 break를 검
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

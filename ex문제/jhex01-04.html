@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또4가지 숫자 뽑기</title>
+    <script>
+        let arr = []
+        
+        for(let i = 0; i<4; i++){
+            const ran = Math.floor(Math.random()*45)+1
+            arr[i]=ran
+            let a1= arr[0]
+            let a2= arr[1]
+            let a3= arr[2]
+            let a4 =arr[3]
+
+            console.log(arr)
+    
+            if(a1 < a2 && a1 <a3 && a1 < a4 && a2 < a3 && a2 < a4 && a3 < a4 ){
+                arr.push(a1) 
+                arr.push(a2)
+                arr.push(a3)
+                arr.push(a4)         
+           }
+           if(a1 < a2 && a1 < a3 && a1>a4 && a2 < a3 && a2 <a4 && a3 > a4 ){
+                 arr.push(a1)
+                 arr.push(a2)
+                 arr.push(a4)
+                 arr.push(a3)
+            }
+            if(a1 > a2 && a1 > a3 && a1>a4 && a2 > a3 && a2 < a4 && a3 < a4  ){
+                 arr.push(a1)
+                 arr.push(a3)
+                 arr.push(a2)
+                 arr.push(a4)
+            }
+            if(a1 > a2 && a1 < a3 && a1>a4 && a2 > a3 && a2 > a4 && a3 < a4  ){
+                 arr.push(a1)
+                 arr.push(a3)
+                 arr.push(a4)
+                 arr.push(a2)
+            }
+            if(a1 > a2 && a1 > a3 && a1>a4 && a2 < a3 && a2 > a4 && a3 >a4 ){
+                 arr.push(a1)
+                 arr.push(a4)
+                 arr.push(a2)
+                 arr.push(a3)
+            }
+            if(a1 < a2 && a1 > a3 && a1>a4 && a2 > a3 && a2 > a4 && a3 > a4){
+                arr.push(a1)
+                arr.push(a4)
+                arr.push(a3)
+                arr.push(a2)
+            }
+            if(a2 < a1 && a2 <a3 && a2 < a4 && a1 <a3 && a1 <a4 && a3 < a4){
+                arr.push(a2)
+                arr.push(a1)
+                arr.push(a3)
+                arr.push(a4)
+            }
+            if(a2 < a1 && a2 <a3 && a2 < a4 && a1 <a3 && a1 <a4 && a3 > a4){
+                arr.push(a2)
+                arr.push(a1)
+                arr.push(a4)
+                arr.push(a3)
+            }
+            if(a2 < a1 && a2 <a3 && a2 < a4 && a1 >a3 && a1 < a4 && a3 < a4){
+                arr.push(a2)
+                arr.push(a3)
+                arr.push(a1)
+                arr.push(a4)
+            }
+            if(a2 < a1 && a2 <a3 && a2 < a4 && a1 >a3 && a1 > a4 && a3 < a4){
+                arr.push(a2)
+                arr.push(a3)
+                arr.push(a4)
+                arr.push(a1)
+            }
+            if(a2 < a1 && a2 <a3 && a2 < a4 && a1 < a3 && a1 > a4 && a3 > a4){
+                arr.push(a2)
+                arr.push(a4)
+                arr.push(a1)
+                arr.push(a3)
+            }
+            if(a2 < a1 && a2 <a3 && a2 < a4 && a1 < a3 && a1 > a4 && a3 > a4){
+                arr.push(a2)
+                arr.push(a4)
+                arr.push(a3)
+                arr.push(a1)
+            }
+            if(a3 < a1 && a3 < a2 && a3 <a4 && a1 < a2 && a1 <a4 && a2 < a4 ){
+                arr.push(a3)
+                arr.push(a1)
+                arr.push(a2)
+                arr.push(a4)
+            }
+            if(a3 < a1 && a3 < a2 && a3 <a4 && a1 < a2 && a1 <a4 && a2 > a4 ){
+                arr.push(a3)
+                arr.push(a1)
+                arr.push(a4)
+                arr.push(a2)
+            }
+            if(a3 < a1 && a3 < a2 && a3 <a4 && a1 > a2 && a1 <a4 && a2 < a4 ){
+                arr.push(a3)
+                arr.push(a2)
+                arr.push(a1)
+                arr.push(a4)
+            }
+            if(a3 < a1 && a3 < a2 && a3 <a4 && a1 > a2 && a1 >a4 && a2 < a4 ){
+                arr.push(a3)
+                arr.push(a2)
+                arr.push(a4)
+                arr.push(a1)
+            }
+            if(a3 < a1 && a3 < a2 && a3 <a4 && a1 < a2 && a1 >a4 && a2 > a4 ){
+                arr.push(a3)
+                arr.push(a4)
+                arr.push(a1)
+                arr.push(a2)
+            }
+            if(a3 < a1 && a3 < a2 && a3 <a4 && a1 > a2 && a1 >a4 && a2 > a4 ){
+                arr.push(a3)
+                arr.push(a4)
+                arr.push(a2)
+                arr.push(a1)
+            }
+            if(a4< a1 && a4 <a2&& a4 <a3 && a1 <a2 && a1<a3 && a2 < a3 ){
+                arr.push(a4)
+                arr.push(a1)
+                arr.push(a2)
+                arr.push(a3)
+            }
+            if(a4< a1 && a4 <a2&& a4 <a3 && a1 <a2 && a1<a3 && a2 > a3 ){
+                arr.push(a4)
+                arr.push(a1)
+                arr.push(a3)
+                arr.push(a2)
+            }
+            if(a4< a1 && a4 <a2&& a4 <a3 && a1 >a2 && a1<a3 && a2 < a3 ){
+                arr.push(a4)
+                arr.push(a2)
+                arr.push(a1)
+                arr.push(a3)
+            }
+            if(a4< a1 && a4 <a2&& a4 <a3 && a1 >a2 && a1 > a3 && a2 < a3 ){
+                arr.push(a4)
+                arr.push(a2)
+                arr.push(a3)
+                arr.push(a1)
+            }
+            if(a4< a1 && a4 <a2&& a4 <a3 && a1 <a2 && a1 > a3 && a2 > a3 ){
+                arr.push(a4)
+                arr.push(a3)
+                arr.push(a1)
+                arr.push(a2)
+            }
+            if(a4< a1 && a4 <a2&& a4 <a3 && a1 >a2 && a1 > a3 && a2 > a3 ){
+                arr.push(a4)
+                arr.push(a3)
+                arr.push(a2)
+                arr.push(a1)
+            }
+
+
+ 
+
+         
+            
+        }
+        arr.splice(0,4)
+        console.log(arr)
+      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
