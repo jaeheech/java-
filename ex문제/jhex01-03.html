@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로또1</title>
+    <title>로또2</title>
     <script>
         let arr = []
         
@@ -15,35 +15,34 @@
             let a2= arr[1]
             let a3= arr[2]
             console.log(arr)
-            
-          // [arr[0],arr[1]]=[arr[1],arr[0]]
-            if(a1 > a2 && a1 > a3 && a2 > a3 ){
+    
+            if(a1 < a2 && a1 <a3 && a2 < a3 ){
                 arr.push(a1)
                 arr.push(a2)
                 arr.push(a3) 
                       
            }
-            if(a1 > a2 && a1 > a3 && a2 < a3 ){
-                 arr.push(a1)
-                 arr.push(a3)
-                 arr.push(a2)
-            }
             if(a1 < a2 && a1 < a3 && a2 > a3 ){
+                 arr.push(a1)
+                 arr.push(a3)
+                 arr.push(a2)
+            }
+            if(a1 > a2 && a1 > a3 && a2 < a3 ){
                  arr.push(a2)
                  arr.push(a3)
                  arr.push(a1)
             }
-            if(a1 < a2 && a1 > a3 && a2 > a3 ){
+            if(a1 > a2 && a1 < a3 && a2 < a3 ){
                 arr.push(a2)
                  arr.push(a1)
                  arr.push(a3)
             }
-            if(a1 < a2 && a1 < a3 && a2 < a3 ){
+            if(a1 > a2 && a1 > a3 && a2 > a3 ){
                  arr.push(a3)
                  arr.push(a2)
                  arr.push(a1)
             }
-            if(a1 > a2 && a1 < a3 && a2 < a3){
+            if(a1 < a2 && a1 > a3 && a2 > a3){
                 arr.push(a3)
                 arr.push(a1)
                 arr.push(a2)
@@ -52,7 +51,7 @@
  
 
          //나온값 i중 [ㅇ,ㅇ,ㅇ] 0 번과 1번 비교 0번과 2번비교 1과 2번 비교
-          
+                // [arr[0],arr[1]]=[arr[1],arr[0]]
         
             
         }
