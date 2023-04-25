@@ -30,7 +30,7 @@ dice[ran-1]++
 
 
 for(let j=0;j<dice.length-1;j++){dice[6]+=dice[j]}
-console.log(dchart)
+// console.log(dchart)
 console.log(dice)
 
 const dchart = dice.splice(0,dice.length-1)
@@ -50,7 +50,8 @@ console.timeEnd('')
             datasets: [{
               label: '# of Votes',
               data: dchart,
-              borderWidth: 1
+              borderWidth: 0.1,
+              
             }]
           },
           options: {

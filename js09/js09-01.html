@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로또 중복제거 참고용</title>
     <script>
+        const count= []
+        for(let j =0; j<45; j++)count.push(0)
+        
+
         
         function lotto(){
         const arr = []
@@ -15,6 +19,7 @@
         }
 
         console.log(arr.sort((a,b)=>(a-b)))
+        
         }
         //  100번 돌리기 
         for(let i =0; i<100; i++){

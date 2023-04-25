@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또뽑기 최종</title>
+    <script>
+
+        const arr = []
+       
+        
+        for(let i=0;i<6;i++){
+            const ran = Math.floor(Math.random()*45)+1
+            if(arr.indexOf(ran)==-1){
+            console.log(ran)
+            arr[i]=ran
+            } else {
+                i--;
+            }
+        }
+        // console.log(arr)
+      
+        for(let j=0;j<100;j++){
+            if(arr[0]<arr[1]&&arr[1]<arr[2]&&arr[2]<arr[3]&&arr[3]<arr[4]&&arr[4]<arr[5])break
+            if(arr[0]>arr[1]){
+                [arr[0],arr[1],arr[2]]=[arr[1],arr[0],arr[2]]
+            }
+            if(arr[1]>arr[2]){
+                [arr[0],arr[1],arr[2]] = [arr[0],arr[2],arr[1]]
+            }
+            if(arr[2] > arr[3]){
+                [arr[0],arr[1],arr[2],arr[3]]=[arr[0],arr[1],arr[3],arr[2]]
+
+            }
+            if(arr[3] > arr[4]){
+                [arr[0],arr[1],arr[2],arr[03],arr[4]]=[arr[0],arr[1],arr[2],arr[4],arr[3]]
+            }
+            if(arr[4] > arr[5]){
+                [arr[0],arr[1],arr[2],arr[03],arr[4],arr[5]]=[arr[0],arr[1],arr[2],arr[03],arr[5],arr[4]]
+
+            }
+
+        }
+        console.log(arr)
+
+
+        const brr = []
+     
+        
+        for(let i=0;i<6;i++){
+            const ran = Math.floor(Math.random()*45)+1
+            if(brr.indexOf(ran)==-1){
+            console.log(ran)
+            brr[i]=ran
+            } else {
+                i--;
+            }
+        }
+        // console.log(brr)
+      
+        for(let j=0;j<100;j++){
+            if(brr[0]<brr[1]&&brr[1]<brr[2]&&brr[2]<brr[3]&&brr[3]<brr[4]&&brr[4]<brr[5])break
+            if(brr[0]>brr[1]){
+                [brr[0],brr[1],brr[2]]=[brr[1],brr[0],brr[2]]
+            }
+            if(brr[1]>brr[2]){
+                [brr[0],brr[1],brr[2]] = [brr[0],brr[2],brr[1]]
+            }
+            if(brr[2] > brr[3]){
+                [brr[0],brr[1],brr[2],brr[3]]=[brr[0],brr[1],brr[3],brr[2]]
+
+            }
+            if(brr[3] > brr[4]){
+                [brr[0],brr[1],brr[2],brr[03],brr[4]]=[brr[0],brr[1],brr[2],brr[4],brr[3]]
+            }
+            if(brr[4] > brr[5]){
+                [brr[0],brr[1],brr[2],brr[03],brr[4],brr[5]]=[brr[0],brr[1],brr[2],brr[03],brr[5],brr[4]]
+
+            }
+
+        }
+        console.log(brr)
+
+
+
+        function b1(){
+            document.write
+            (`<h1>${arr}</h1><h2>로또 추천번호 입니다!!</h2><button onclick="b1()">로또추천번호1</button><button onclick="b2()">로또추천번호2</button>`)
+        }
+        
+        function b2(){
+            document.write
+            (`<h1>${brr}</h1><h2>사장님 추천번호입니다!!</h2> <button onclick="b1()">로또추천번호1</button><button onclick="b2()">로또추천번호2</button>`)
+        }
+        
+    </script>
+</head>
+<body>
+    <button onclick="b1()">로또 추천번호</button>
+    <button onclick="b2()">사장님 추천번호</button>
+</body>
+</html>
