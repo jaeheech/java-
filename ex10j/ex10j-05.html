@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> document.write 연습</title>
+    <script>
+       
+        
+        
+        function a1on(){
+            document.open()
+            document.write('<div onclick="a1off()" style="color:blue;border: 1px solid red;">2단 시작</div>')
+            document.close()
+        }
+        function a1off(){
+            
+            document.write
+            (`<div onclick="a1on()" style="color:#000;border: 1px solid blue; background-color:pink;">
+            
+            
+                 <table>
+             <tr><th>2</th><th>X</th><th>1</th><th>=</th><th>2</th></tr>
+             <tr><th>2</th><th>X</th><th>2</th><th>=</th><th>4</th></tr>
+             <tr><th>2</th><th>X</th><th>3</th><th>=</th><th>6</th></tr>
+             <tr><th>2</th><th>X</th><th>4</th><th>=</th><th>8</th></tr>
+             <tr><th>2</th><th>X</th><th>5</th><th>=</th><th>10</th></tr>
+             <tr><th>2</th><th>X</th><th>6</th><th>=</th><th>12</th></tr>
+             <tr><th>2</th><th>X</th><th>7</th><th>=</th><th>14</th></tr>
+             <tr><th>2</th><th>X</th><th>8</th><th>=</th><th>16</th></tr>
+             <tr><th>2</th><th>X</th><th>9</th><th>=</th><th>18</th></tr>
+            </table>
+           </div> <button onclick="a2on()">3단</button><button onclick="a3on()">4단</button>`)
+           
+           
+        }
+        function a2on(){
+            document.open()
+            document.write('<div onclick="a2off()" style="color:blue;border: 1px solid red;">3단 시작</div>')
+            document.close()
+        }
+        function a2off(){
+            document.write
+            (`<div onclick="a2on()" style="color:#000;border: 1px solid blue; background-color:beige;">
+            <table>
+            <tr><th>3</th><th>X</th><th>1</th><th>=</th><th>3</th></tr>
+            <tr><th>3</th><th>X</th><th>2</th><th>=</th><th>6</th></tr>
+            <tr><th>3</th><th>X</th><th>3</th><th>=</th><th>9</th></tr>
+            <tr><th>3</th><th>X</th><th>4</th><th>=</th><th>12</th></tr>
+            <tr><th>3</th><th>X</th><th>5</th><th>=</th><th>15</th></tr>
+            <tr><th>3</th><th>X</th><th>6</th><th>=</th><th>18</th></tr>
+            <tr><th>3</th><th>X</th><th>7</th><th>=</th><th>21</th></tr>
+            <tr><th>3</th><th>X</th><th>8</th><th>=</th><th>24</th></tr>
+            <tr><th>3</th><th>X</th><th>9</th><th>=</th><th>27</th></tr>
+            </table></div> <button onclick="a1on()"style=color:#000;border: 1px solid;>2단</bytton><button onclick="a3on()">4단</button>`)
+           
+        }
+        function a3on(){
+            document.open()
+            document.write('<div onclick="a3off()" style="color:blue;border: 1px solid red;">4단 시작</div>')
+            document.close()
+        }
+        function a3off(){
+            document.write
+            (`<div onclick="a3on()" style="color:#000;border: 1px solid blue; background-color:aqua;">
+            <table>
+            <tr><th>4</th><th>X</th><th>1</th><th>=</th><th>4</th></tr>
+            <tr><th>4</th><th>X</th><th>2</th><th>=</th><th>8</th></tr>
+            <tr><th>4</th><th>X</th><th>3</th><th>=</th><th>12</th></tr>
+            <tr><th>4</th><th>X</th><th>4</th><th>=</th><th>16</th></tr>
+            <tr><th>4</th><th>X</th><th>5</th><th>=</th><th>20</th></tr>
+            <tr><th>4</th><th>X</th><th>6</th><th>=</th><th>24</th></tr>
+            <tr><th>4</th><th>X</th><th>7</th><th>=</th><th>28</th></tr>
+            <tr><th>4</th><th>X</th><th>8</th><th>=</th><th>32</th></tr>
+            <tr><th>4</th><th>X</th><th>9</th><th>=</th><th>36</th></tr>
+            </table></div><button onclick="a1on()"style=color:#000;border: 1px solid;>2단</bytton> <button onclick="a2on()">3단</button>`)
+           
+        }
+              
+              
+      
+   
+
+
+    </script>
+    <style>
+        table,tr,th,td{
+            border-collapse: collapse;
+            border:1px ;
+        }
+        button{
+            width: 80px;
+            height: 80px;
+            float: left;
+        }
+    </style>
+</head>
+<body> 
+<h1>구구단</h1>
+    <button onclick="a1on()"style=color:#000;border: 1px solid;>2단</bytton>
+    <button onclick="a2on()">3단</button>
+    <button onclick="a3on()">4단</button>
+    <table></table>
+    
+    
+    
+    
+   
+
+   
+</body>
+</html>
