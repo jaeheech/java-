@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+           let arr = [800000,2200000,800000,200000,120000,80000,50000]
+        function discount10(){ 
+            
+        let list = ''
+        list +=` <table style="border: 1px solid black;"><tr style="border: 1px solid black;"><td colspan="4"style="border: 1px solid black;">10%판매품목</td style="border: 1px solid black;"></tr>`
+        list +=` <tr style="border: 1px solid black;"><th style="border: 1px solid black;">No.</th><th>품목</th><th>정가</th><th>할인율</th></tr><tr>`     
+        list +=` <td>1</td><td>컴퓨터</td><td>800000</td><td>${arr[0]*0.9} </td></tr><tr>`
+        list +=` <td>2</td><td>노트북</td><td>2200000</td><td>${arr[1]*0.9}  </td></tr>`
+        list +=` <tr><td>3</td><td>태블릿</td><td>800000</td><td>${arr[2]*0.9}  </td></tr>`
+        list +=` <tr><td>4</td><td>스마트폰</td><td>2000000</td><td>${arr[3]*0.9}  </td></tr>`
+        list +=` <tr><td>5</td><td>공유기</td><td>120000</td><td>${arr[4]*0.9}  </td></tr>`
+        list +=` <tr><td>6</td><td>키보드</td><td>80000</td><td>${arr[5]*0.9}  </td></tr>`
+        list +=` <tr><td>7</td><td>마우스</td><td>50000</td><td>${arr[6]*0.9}  </td></tr>`
+        list +=` <tr><td colspan="2">합계</td><td>6050000</td><td>${(arr[0]+arr[1]+arr[2]+arr[3]+arr[4]+arr[5]+arr[6])*0.9} </td></tr>`
+        list +=` </table> <button onclick="discount20()">20% 할인</button><button onclick="discount30()">30% 할인</button><button onclick="discount40()">40% 할인</button>`
+        document.close()
+        document.write(list)
+      
+        }
+        function discount20(){ 
+            
+        let list = ''
+        list +=` <table><tr><td colspan="4" >20%판매품목</td></tr>`
+        list +=` <tr><th>No.</th><th>품목</th><th>정가</th><th>할인율</th></tr><tr>`     
+        list +=` <td>1</td><td>컴퓨터</td><td>800000</td><td>${arr[0]*0.8} </td></tr><tr>`
+        list +=` <td>2</td><td>노트북</td><td>2200000</td><td>${arr[1]*0.8}  </td></tr>`
+        list +=` <tr><td>3</td><td>태블릿</td><td>800000</td><td>${arr[2]*0.8}  </td></tr>`
+        list +=` <tr><td>4</td><td>스마트폰</td><td>2000000</td><td>${arr[3]*0.8}  </td></tr>`
+        list +=` <tr><td>5</td><td>공유기</td><td>120000</td><td>${arr[4]*0.8}  </td></tr>`
+        list +=` <tr><td>6</td><td>키보드</td><td>80000</td><td>${arr[5]*0.8}  </td></tr>`
+        list +=` <tr><td>7</td><td>마우스</td><td>50000</td><td>${arr[6]*0.8}  </td></tr>`
+        list +=` <tr><td colspan="2">합계</td><td>6050000</td><td>${(arr[0]+arr[1]+arr[2]+arr[3]+arr[4]+arr[5]+arr[6])*0.8} </td></tr>`
+        list +=` </table> <button onclick="discount10()">10% 할인</button><button onclick="discount30()">30% 할인</button><button onclick="discount40()">40% 할인</button>`
+       document.close()
+        document.write(list)
+        
+        }
+        function discount30(){ 
+            
+            let list = ''
+            list +=` <table><tr><td colspan="4" > 30%판매품목</td></tr>`
+            list +=` <tr><th>No.</th><th>품목</th><th>정가</th><th>할인율</th></tr><tr>`     
+            list +=` <td>1</td><td>컴퓨터</td><td>800000</td><td>${arr[0]*0.7} </td></tr><tr>`
+            list +=` <td>2</td><td>노트북</td><td>2200000</td><td>${arr[1]*0.7}  </td></tr>`
+            list +=` <tr><td>3</td><td>태블릿</td><td>800000</td><td>${arr[2]*0.7}  </td></tr>`
+            list +=` <tr><td>4</td><td>스마트폰</td><td>2000000</td><td>${arr[3]*0.7}  </td></tr>`
+            list +=` <tr><td>5</td><td>공유기</td><td>120000</td><td>${arr[4]*0.7}  </td></tr>`
+            list +=` <tr><td>6</td><td>키보드</td><td>80000</td><td>${arr[5]*0.7}  </td></tr>`
+            list +=` <tr><td>7</td><td>마우스</td><td>50000</td><td>${arr[6]*0.7}  </td></tr>`
+            list +=` <tr><td colspan="2">합계</td><td>6050000</td><td>${(arr[0]+arr[1]+arr[2]+arr[3]+arr[4]+arr[5]+arr[6])*0.7}  </td></tr>`
+            list +=` </table> <button onclick="discount10()">10% 할인</button><button onclick="discount20()">20% 할인</button><button onclick="discount40()">40% 할인</button>`
+            document.close()
+            document.write(list)
+            
+            }
+            function discount40(){ 
+            
+            let list = ''
+            list +=` <table><tr><td colspan="4" > 40%판매품목</td></tr>`
+            list +=` <tr><th>No.</th><th>품목</th><th>정가</th><th>할인율</th></tr><tr>`     
+            list +=` <td>1</td><td>컴퓨터</td><td>800000</td><td>${arr[0]*0.6} </td></tr><tr>`
+            list +=` <td>2</td><td>노트북</td><td>2200000</td><td>${arr[1]*0.6}  </td></tr>`
+            list +=` <tr><td>3</td><td>태블릿</td><td>800000</td><td>${arr[2]*0.6}  </td></tr>`
+            list +=` <tr><td>4</td><td>스마트폰</td><td>2000000</td><td>${arr[3]*0.6}  </td></tr>`
+            list +=` <tr><td>5</td><td>공유기</td><td>120000</td><td>${arr[4]*0.6}  </td></tr>`
+            list +=` <tr><td>6</td><td>키보드</td><td>80000</td><td>${arr[5]*0.6}  </td></tr>`
+            list +=` <tr><td>7</td><td>마우스</td><td>50000</td><td>${arr[6]*0.6}  </td></tr>`
+            list +=` <tr><td colspan="2">합계</td><td>6050000</td><td>${(arr[0]+arr[1]+arr[2]+arr[3]+arr[4]+arr[5]+arr[6])*0.6}  </td></tr>`
+            list +=` </table> <button onclick="discount10()">10% 할인</button><button onclick="discount20()">20% 할인</button><button onclick="discount30()">30% 할인</button>`
+            document.close()
+            document.write(list)
+            
+            }
+      
+     
+    </script>
+   
+</head>
+<body>
+    <button onclick="discount10()">10% 할인</button>
+    <button onclick="discount20()">20% 할인</button>
+    <button onclick="discount30()">30% 할인</button>
+    <button onclick="discount40()">40% 할인</button>
+
+</body>
+</html>

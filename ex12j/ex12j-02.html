@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최솟값 구하기</title>
+    <script>
+
+        const a =[44,55,66,98,0,-11,-22]
+        function min(a){
+            let vs = a[0]
+            for(let i = 0;i<a.length;i++)if(vs > a[i])vs= a[i]
+            return vs  
+             }  
+            console.log(min(a)) 
+          
+        function max(a){
+            let vs = a[0]
+            for(let i = 0;i<a.length;i++)if(vs < a[i])vs= a[i]
+            return vs  
+            }  
+            console.log(max(a)) 
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

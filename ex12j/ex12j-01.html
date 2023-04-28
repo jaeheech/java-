@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+   
+        function fn(a1,a2,a3,a4){
+            let arr = [a1,a2,a3,a4]
+            for(;;){
+            if(arr[0] < arr[1] && arr[1] <arr[2] && arr[2] < arr[3])break;
+                if(arr[0]> arr[1]){
+                [arr[0],arr[1],arr[2],arr[3]]=[arr[1],arr[0],arr[2],arr[3]]
+            }
+            if(arr[1] > arr[2]){
+                [arr[0],arr[1],arr[2],arr[3]]=[arr[0],arr[2],arr[1],arr[3]]
+            }
+            if(arr[2]> arr[3]){
+                [arr[0],arr[1],arr[2],arr[3]]=[arr[0],arr[1],arr[3],arr[2]]
+            }
+        }
+            
+           return arr[0]
+            }
+        
+         let a1 = prompt('수를 입력하세요')*1
+         let a2 = prompt('수를 입력하세요')*1
+         let a3 = prompt('수를 입력하세요')*1
+         let a4 = prompt('수를 입력하세요')*1
+         
+         console.log(fn(a1,a2,a3,a4))
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
