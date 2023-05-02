@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const array= [1,2,3,4,5,6,7,8,9,10]
+        arr1 =[]
+        arr2= []
+        console.log(array)
+   
+
+        array.forEach(function(v){
+           if(v%2==0){
+                
+                arr1.push(v)
+            }else(arr2.push(v))
+            
+            
+        })
+        console.log(arr1)
+        console.log(arr2)
+        document.write(`<h1>원본 :${array}<hr>
+                        짝수 :${arr1}<hr>\
+                        홀수 :${arr2}</h1>`)
+                        
+          
+        </script>
+</head>
+<body>
+
+    
+</body>
+</html>

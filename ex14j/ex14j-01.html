@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach = 콜백 함수를 활용</title>
+    <script>
+        function ror(heroName,level,callback){
+            if(level>=6){
+
+                document.write(`<h1>${heroName}님께서 궁극기를 시전하였습니다.</h1>`)
+                callback(level) 
+                
+                
+            }else{
+                document.write(`<h1>${heroName}님께서 평타를 쳤습니다. 아야~</h1>`)
+                
+            }
+        }
+        function fire(ff){
+            for(let i =1;i<ff;i++){ 
+                document.write(`${i}번째 파이어를 ${i}개 던집니다.<hr>`)
+
+            }
+        }
+        function ice(dd){
+            for(let j=1;j<dd;j++){
+                document.write(`${j}번째 얼음송곳을 ${j*dd}개 던집니다.<hr>`)
+            }
+        }
+    
+        function slow(aa){
+            for(let a =1;a<aa;a++){
+                document.write(`${a}번째 때려서  ${a*5}% 느려집니다.<hr>`)
+            }
+
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

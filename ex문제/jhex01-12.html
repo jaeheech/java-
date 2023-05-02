@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        //            글자가 5글자 이상만 뽑아서 새로운 배열에 넣으세요
+        //            글자길이가 긴 순서대로 나열 하시오.
+        //            함수화 하기 
+        let arr =  ['apple', 'pear' ,'watermelon', 'melon', 'peach','mango', 
+        'banana', 'strawberry', 'orange', 'grape', 'kiwi', 'mandarin']
+        // let total =[...arr]*1
+        let fruit =[]
+        console.log(arr)
+        function a1(a){
+        for(let i = 0; i<arr.length;i++){
+        if(arr[i].length >=5){fruit.push(arr[i])
+        }
+        }
+
+         fruit.sort((b,a)=>a.length-b.length)
+       }
+        a1(arr)
+        console.log(fruit) 
+        
+        
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
