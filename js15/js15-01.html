@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열의 map() 메소드</title>
+    <script>
+        // 속성 string.length 
+        // , 메소드 Math.max()
+        const arr1= [11,22,33,44,55]
+        const arr2= []
+       
+        // const arr2 = []
+        // for(let i = 0;i<arr1.length;i++){
+        //     arr2.push(i)
+        // }
+
+        //1.function(    ){    }는 다음과 같다(    )=>{    } 100% 같지않다
+        // const arr2=arr1.map(function(v){
+        //     return v*2
+        // }) 
+        arr1.forEach(function(v){
+            arr2.push(v)
+        })
+
+         
+
+        // const arr2=arr1.map(v=> v*2)  //최신문법  (    )=>{    }
+        // const arr2=arr1.map(v=>v)  //최신문법 복사 (    )=>{    }
+        console.log(arr2)
+        console.log(arr3)
+
+           
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
