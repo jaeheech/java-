@@ -4,26 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>배열문제 map</title>
+    <title>타이머 (setTimeout)</title>
     <script>
-        let ct = 0;
-     let arr = Array(200).fill(0).map((v,i)=>{
-        if(i<77)ct+=1
-        if(i>77 && i<=166)ct+=2
-        if(i>166)ct=ct-1
-        return ct
-     })
-    
-     console.log(arr)
-
-
-
-
-
-
-   
- 
-
+        setTimeout(()=>{console.log('오래 기다리셨죠?')},3*1000)
     </script>
 </head>
 <body>

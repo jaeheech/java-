@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+          let arr =  ['apple', 'pear' ,'watermelon', 'melon', 'peach','mango', 
+        'banana', 'strawberry', 'orange', 'grape', 'kiwi', 'mandarin']
+        const fruit = arr.filter(function(value){
+            return value.length>= 5
+        })
+        fruit.sort((a,b)=>(b.length-a.length))
+        console.log(fruit)
+        console.log(`5글자이상 : ${fruit}`)
+        //글자 길이가 가장 긴 것 부터 나열하여라
+      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
