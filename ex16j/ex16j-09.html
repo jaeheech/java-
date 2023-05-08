@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     
+     let ct = 0
+        const tid = setInterval(()=>{document.close();document.write(`<h1>${++ct}초 입니다.</h1>    <div style="background-color: red; width: 200px; height: 200px;  border-radius: 800px;"></div>
+`)},10*1000)
+    setTimeout(()=>
+    {
+        clearInterval(tid)
+       
+        document.write(`<hr><h1 style = "color:yellow">노란불 되었습니다..!!!</h1>     <div style="background-color: yellow; width: 200px; height: 200px;  border-radius: 800px;"></div>
+`)
+    },2*1000)
+    </script>
+</head> 
+
+<body>
+    
+</body>
+</html>
