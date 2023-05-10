@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const object = {
+        name: "혼자 공부하는 파이썬",
+        price: 18000,
+        publisher: "한빛미디어",
+      };
+      const obj1 = {
+        ko: "빵",
+        en: "bread",
+        fr: "pain",
+        es: "pan",
+        lang: {
+          ko: "한국어",
+          en: "영어",
+          fr: "프랑스어",
+          es: "스페인어",
+        },
+        print: function (lang) {
+          console.log(`${this.ko}는 ${this.lang[lang]}로 ${this[lang]}입니다.`);
+        },
+      };
+      obj1.print("es");
+    </script>
+  </head>
+  <body></body>
+</html>
