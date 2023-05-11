@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문자열을 특정 기호로 자르기</title>
+    <script>
+      let input = `
+          일자,달러,엔,유로
+          02,1141.8,1097.46,1262.37
+          02,1141.8,1097.46,1262.37
+          02,1141.8,1097.46,1262.37
+          02,1141.8,1097.46,1262.37
+          02,1141.8,1097.46,1262.37
+
+          `;
+
+      input = input.split("\n"); //줄바꿈으로 자르기
+      console.log(input);
+      input = input.map((v) => v.trim());
+      console.log(input);
+      input = input.map((line) => line.split(","));
+      console.log(input);
+
+      console.log(JSON.stringify(input, null, 2));
+    </script>
+  </head>
+  <body></body>
+</html>

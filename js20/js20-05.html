@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const m = Number("숫자로 변환할 수 없는 경우");
+      console.log(m);
+      console.log(m === NaN);
+      console.log(Number.isNaN(m));
+
+      //infinity
+      const n = 10 / 0;
+      console.log(n); // 양의 무한대 생성
+
+      const o = -10 / 0;
+      console.log(o); //음의 무한대 생성
+
+      console.log(Number.isFinite(n));
+      console.log(Number.isFinite(o));
+
+      console.log(Number.isFinite(1));
+      console.log(Number.isFinite(10));
+    </script>
+  </head>
+  <body></body>
+</html>

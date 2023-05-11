@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메소드</title>
+    <script>
+      let str1 = "     안 녕하세요     ";
+      console.log(str1);
+      console.log(str1.trim()); //띄워쓰기를 없애주는기능 ,전과 후의 공백을 없애줌
+
+      let str2 = "a,b,c,d,e,f,g,h";
+      let str2A = str2.split(","); //문자를 배열로
+      console.log(str2);
+      console.log(str2A);
+
+      const str = "오늘 학교에서 시험을 아주 잘 쳤어요.";
+      const arr = str.split(" ");
+      console.log(str);
+      console.log(arr);
+
+      const str4 = `내가 만약
+        나비라면
+        훨훨
+        날아갈텐데...`;
+
+      const str5 = str4.split("\n");
+      console.log(str5);
+      for (i in str5) {
+        str5[i] = str5[i].trim();
+      }
+      console.log(str5);
+      //arr에 문장을 인덱스를 부여하여 완성하시오.(단,띄어쓰기를 기준으로 )
+      //map 을 이용해서 요소마다 trim()을 적용하고 새로운 배열을 생성하라.
+
+      const str7 = str5.map((v) => v.trim());
+      console.log(str7);
+    </script>
+  </head>
+  <body></body>
+</html>

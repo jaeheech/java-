@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>프로토타입</title>
+    <script>
+      String.prototype.ck = function (data) {
+        return this.indexOf(data) >= 0
+          ? `${this.indexOf(data) + 1}번째있어요^^` // ? 1:2 삼항연산자
+          : "없네요ㅜㅜ";
+        {
+        }
+      };
+      Array.prototype.ck = function (data) {
+        return this.indexOf(data) >= 0
+          ? `${this.indexOf(data)}번째 있어요!!`
+          : "없어요ㅠㅠ";
+      };
+      const str = "안녕하세요";
+      console.log(str.ck("하세"));
+      console.log(str.ck("몰라"));
+
+      const b = [11, 22, 33, 44, 55];
+      console.log(b.ck(11));
+      console.log(b.ck(66));
+    </script>
+  </head>
+  <body></body>
+</html>
