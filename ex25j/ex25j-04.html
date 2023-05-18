@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>getElementBy</title>
+    <script>
+      //선택자
+      // querySelector("")
+
+      // querySelectorAll("")==> Nodelist 이름의 유사배열
+      // querySelectorBy~
+      // querySelectorsBy~ ==> HTMLCollection 이름의 유사배열
+      document.addEventListener("DOMContentLoaded", () => {
+        const all = document.querySelectorAll("div");
+        const c1 = document.querySelector(".c1");
+        const i1 = document.querySelector("#i1");
+        const tag = document.getElementsByTagName("div");
+        const name = document.getElementsByName("text1");
+        const c2 = document.getElementsByClassName("c2");
+        const i2 = document.getElementById("i2");
+        console.log(all);
+        console.log(c1);
+        console.log(i1);
+        console.log(tag);
+        console.log(name);
+        console.log(c2);
+        console.log(i2);
+      });
+    </script>
+  </head>
+  <body>
+    <div class="c1">
+      <dic id="i1"></dic>
+    </div>
+    <div class="c2">
+      <div id="i2"></div>
+    </div>
+    <div class="c2"></div>
+    <textarea name="text1" id="" cols="30" rows="10"></textarea>
+    <textarea name="text1" id="" cols="30" rows="10"></textarea>
+  </body>
+</html>
