@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>할일 목록 만들기</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const h1 = document.createElement("h1");
+        const input = document.createElement("input");
+        const button = document.createElement("button");
+        const hr = document.createElement("hr");
+
+        document.body.appendChild(h1);
+        document.body.appendChild(input);
+        document.body.appendChild(button);
+        document.body.appendChild(hr);
+
+        h1.textContent = "할 일 목록";
+        button.textContent = "추가하기";
+
+        input.style.padding = "10px";
+        input.setAttribute("id", "todo");
+
+        button.addEventListener("click", (event) => {
+          const checkbox = document.createElement("input");
+          document.body.appendChild(checkbox);
+          checkbox.type = "checkbox";
+
+          const span = document.createElement("span");
+          document.body.appendChild(span);
+          span.textContent = `${input.value}`;
+
+          const button1 = document.createElement("button");
+          document.body.appendChild(button1);
+          button1.textContent = "제거하기";
+
+          const br = document.createElement("br");
+          document.body.appendChild(br);
+          checkbox.addEventListener("click", (event) => {
+            span.style.textDecoration = event.target.checked
+              ? " line-through"
+              : "";
+          });
+          button1.addEventListener("click", (event) => {});
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

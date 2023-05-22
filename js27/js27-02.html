@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const div = document.createElement("div");
+        const input = document.createElement("input");
+        const select1 = document.createElement("select");
+        const br1 = document.createElement("br");
+
+        const h1 = document.createElement("h1");
+        const input1 = document.createElement("input");
+
+        const br = document.createElement("br");
+        const select = document.createElement("select");
+        const option1 = document.createElement("option");
+        const option2 = document.createElement("option");
+        const option3 = document.createElement("option");
+        const option4 = document.createElement("option");
+        const option5 = document.createElement("option");
+        const option6 = document.createElement("option");
+        const option7 = document.createElement("option");
+        const option8 = document.createElement("option");
+
+        document.body.appendChild(div);
+        document.body.appendChild(input);
+        document.body.appendChild(br1);
+        document.body.appendChild(select1);
+        document.body.appendChild(h1);
+        document.body.appendChild(input1);
+        document.body.appendChild(br);
+        document.body.appendChild(select);
+        document.div.appendChild(input, br1, select1, h1, input1, br, select);
+
+        div.style.display = "flex";
+        h1.textContent = "=";
+        option1.textContent = "킬로미터";
+        option2.textContent = "미터";
+        option3.textContent = "센티미터";
+        option4.textContent = "밀리미터";
+        option5.textContent = "킬로미터";
+        option6.textContent = "미터";
+        option7.textContent = "센티미터";
+        option8.textContent = "밀리미터";
+        select1.append(option5, option6, option7, option8);
+        select.append(option1, option2, option3, option4);
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
