@@ -5,37 +5,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>할일 목록 만들기</title>
+    <style>
+      .head {
+        font-size: 50px;
+        color: powderblue;
+        text-align: center;
+      }
+      .bt0 {
+        background-color: cornflowerblue;
+        font-size: 20px;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+        color: white;
+      }
+      .text {
+        padding: 10px;
+        border-radius: 20px;
+        background-color: beige;
+        color: lightpink;
+        font-weight: bold;
+        font-size: 30px;
+      }
+      .bt2 {
+        background-color: cornflowerblue;
+        font-size: 20px;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+        color: red;
+      }
+      .check1 {
+        width: 20px;
+        height: 20px;
+      }
+      .span {
+        font-weight: bold;
+        font-size: 25px;
+        color: burlywood;
+      }
+      .bt1 {
+        background-color: cornflowerblue;
+        font-size: 20px;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+        color: white;
+      }
+      body {
+        background-color: bisque;
+      }
+    </style>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        const div = document.createElement("div");
         const h1 = document.createElement("h1");
         const input = document.createElement("input");
         const button = document.createElement("button");
         const hr = document.createElement("hr");
+        const button2 = document.createElement("button");
 
-        document.body.appendChild(h1);
-        document.body.appendChild(input);
-        document.body.appendChild(button);
-        document.body.appendChild(hr);
+        new TypeIt(h1)
+          .pause(1000) //1초 기다림
+          .delete(4, { delay: 1000 }) // 1초 기다렸다 6글자 삭제
+          .type("이번주 할 일을 적으세요.") // 고맙습니다 타이핑
+          .go(); // 실행
+
+        document.body.append(h1, input, button, button2, hr, div);
+
+        h1.className = "head";
+        input.className = "text";
+        button.className = "bt0";
+        button2.className = "bt2";
 
         h1.textContent = "할 일 목록";
         button.textContent = "추가하기";
+        button2.textContent = "전체삭제";
 
-        input.style.padding = "10px";
-        input.setAttribute("id", "todo");
-
+        /*추가하기 동작 1단계*/
+        let ct = 0;
         button.addEventListener("click", (event) => {
           const checkbox = document.createElement("input");
           document.body.appendChild(checkbox);
           checkbox.type = "checkbox";
+          checkbox.className = "check1";
 
           const span = document.createElement("span");
           document.body.appendChild(span);
           span.textContent = `${input.value}`;
+          span.className = "span";
 
           const button1 = document.createElement("button");
           document.body.appendChild(button1);
           button1.textContent = "제거하기";
+          input.value = "";
+          button1.className = "bt1";
 
+          //체크박스 체크했을때 할일에 줄그어지는부분
           const br = document.createElement("br");
           document.body.appendChild(br);
           checkbox.addEventListener("click", (event) => {
@@ -43,7 +110,22 @@
               ? " line-through"
               : "";
           });
-          button1.addEventListener("click", (event) => {});
+          //체크를 해야만 삭제 하기 기능 동작
+          button1.addEventListener("click", (event) => {
+            if (checkbox.checked) {
+              document.body.removeChild(checkbox);
+              document.body.removeChild(span);
+              document.body.removeChild(button1);
+            } else {
+              alert("박스를 체크하세요.");
+            }
+          });
+          //전체 삭제 기능
+          button2.addEventListener("click", (event) => {
+            document.body.removeChild(checkbox);
+            document.body.removeChild(span);
+            document.body.removeChild(button1);
+          });
         });
       });
     </script>

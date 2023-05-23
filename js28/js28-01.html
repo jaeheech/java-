@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>풀이버전 할 일 목록 만들기</title>
+    <style>
+      .check-ok {
+        text-decoration: line-through;
+        color: gray;
+      }
+      .check-no {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const h1 = document.createElement("h1");
+        const input = document.createElement("input");
+        const addbtn = document.createElement("button");
+
+        document.body.append(h1, input, addbtn);
+        h1.textContent = "할 일 목록!!";
+        addbtn.textContent = "추가하기";
+        input.setAttribute("id", "todo");
+        input.style.height = "30px";
+        input.style.marginRight = "10px";
+
+        /* 입력한 부분 변수로 받기 */
+        let content = "";
+        input.addEventListener("change", (e) => {
+          content = e.target.value;
+          console.log(content);
+        });
+
+        /* 동작 1단계 */
+        ct = 0;
+        addbtn.addEventListener("click", () => {
+          if (content) {
+            const div = document.createElement("div");
+            const check = document.createElement("input");
+            const span = document.createElement("span");
+            const delbtn = document.createElement("button");
+
+            delbtn.innerHTML = "삭제하기";
+            check.className = ct++;
+            check.type = "checkbox";
+            span.innerHTML = content;
+            document.body.append(div);
+            div.append(check, span, delbtn);
+            input.value = ""; // input 내용 지우기
+            content = "";
+            const del = document.querySelector("." + ct);
+
+            /*체크 방법1*/
+            // check.addEventListener("change", (e) => {
+            //   if (e.currentTarget.checked) {
+            //     span.style.textDecoration = "line-through";
+            //   } else {
+            //     span.style.textDecoration = "none";
+            //   }
+            // });
+
+            //체크방법2
+            check.addEventListener("change", (e) => {
+              if (e.currentTarget.checked) {
+                span.className = "check-ok";
+              } else {
+                span.className = "check-no";
+              }
+            });
+            delbtn.addEventListener("click", (e) => {
+              document.body.removeChild(div);
+            });
+          } else {
+            alert("내용을 입력하세요.");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
