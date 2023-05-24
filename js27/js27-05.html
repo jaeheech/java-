@@ -26,6 +26,7 @@
         color: lightpink;
         font-weight: bold;
         font-size: 30px;
+        justify-content: center;
       }
       .bt2 {
         background-color: cornflowerblue;
@@ -42,7 +43,7 @@
       .span {
         font-weight: bold;
         font-size: 25px;
-        color: burlywood;
+        color: black;
       }
       .bt1 {
         background-color: cornflowerblue;
@@ -53,7 +54,43 @@
         color: white;
       }
       body {
+        /* background-color: bisque; */
+        /* background-image: url(https://img.freepik.com/premium-vector/blank-closed-realistic-spiral-notepad-mockup-isolated-on-white-background-vector-illustration_165488-2941.jpg?w=1380); */
+      }
+      .div1 {
+        justify-content: center;
+        text-align: center;
+        align-items: center;
         background-color: bisque;
+        width: 400px;
+        height: auto;
+        display: flex;
+        margin: 0 auto;
+        border-radius: 10px;
+      }
+      .div {
+        justify-content: center;
+        text-align: center;
+      }
+      .div1:hover {
+        background-color: darksalmon;
+      }
+      @keyframes slidein {
+        from {
+          margin-left: 50%;
+          width: 30%;
+        }
+
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+      .div1 {
+        animation-duration: 3s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
       }
     </style>
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
@@ -69,15 +106,18 @@
         new TypeIt(h1)
           .pause(1000) //1초 기다림
           .delete(4, { delay: 1000 }) // 1초 기다렸다 6글자 삭제
-          .type("이번주 할 일을 적으세요.") // 고맙습니다 타이핑
+          .type("나의 할일 목록") // 고맙습니다 타이핑
           .go(); // 실행
 
-        document.body.append(h1, input, button, button2, hr, div);
+        document.body.append(h1);
+        document.body.append(div);
+        div.append(input, button, button2, hr);
 
         h1.className = "head";
         input.className = "text";
         button.className = "bt0";
         button2.className = "bt2";
+        div.className = "div";
 
         h1.textContent = "할 일 목록";
         button.textContent = "추가하기";
@@ -86,46 +126,60 @@
         /*추가하기 동작 1단계*/
         let ct = 0;
         button.addEventListener("click", (event) => {
-          const checkbox = document.createElement("input");
-          document.body.appendChild(checkbox);
-          checkbox.type = "checkbox";
-          checkbox.className = "check1";
+          if (input.value) {
+            const div1 = document.createElement("div");
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.className = "check1";
+            // document.body.appendChild(checkbox);
+            // document.body.appendChild(span);
+            // document.body.appendChild(button1);
 
-          const span = document.createElement("span");
-          document.body.appendChild(span);
-          span.textContent = `${input.value}`;
-          span.className = "span";
+            const span = document.createElement("span");
+            span.textContent = input.value;
+            span.className = "span";
 
-          const button1 = document.createElement("button");
-          document.body.appendChild(button1);
-          button1.textContent = "제거하기";
-          input.value = "";
-          button1.className = "bt1";
+            const button1 = document.createElement("button");
+            button1.textContent = "제거하기";
+            input.value = "";
+            button1.className = "bt1";
+            document.body.append(div1);
+            div1.append(checkbox, span);
+            div1.className = "div1";
 
-          //체크박스 체크했을때 할일에 줄그어지는부분
-          const br = document.createElement("br");
-          document.body.appendChild(br);
-          checkbox.addEventListener("click", (event) => {
-            span.style.textDecoration = event.target.checked
-              ? " line-through"
-              : "";
-          });
-          //체크를 해야만 삭제 하기 기능 동작
-          button1.addEventListener("click", (event) => {
-            if (checkbox.checked) {
-              document.body.removeChild(checkbox);
-              document.body.removeChild(span);
-              document.body.removeChild(button1);
-            } else {
-              alert("박스를 체크하세요.");
-            }
-          });
-          //전체 삭제 기능
-          button2.addEventListener("click", (event) => {
-            document.body.removeChild(checkbox);
-            document.body.removeChild(span);
-            document.body.removeChild(button1);
-          });
+            //체크박스 체크했을때 할일에 줄그어지는부분
+            const br = document.createElement("br");
+            document.body.appendChild(br);
+            checkbox.addEventListener("click", (event) => {
+              span.style.textDecoration = event.target.checked
+                ? " line-through"
+                : "";
+            });
+            //체크를 해야만 삭제 하기 기능 동작
+            button1.addEventListener("click", (event) => {
+              if (checkbox.checked) {
+                document.body.removeChild(div1);
+              } else {
+                alert("박스를 체크하세요.");
+              }
+              div1.addEventListener("mouseover", (event) => {
+                if (event) {
+                  div1.append(button1);
+                }
+              });
+              div1.addEventListener("mouseout", (event) => {
+                if (event) {
+                  div1.removeChild(button1);
+                }
+              });
+            });
+            //전체 삭제 기능
+            button2.addEventListener("click", (event) => {
+              document.body.removeChild(div1);
+            });
+          } else {
+            alert("내용을 입력하세요.");
+          }
         });
       });
     </script>
