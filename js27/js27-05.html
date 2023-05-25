@@ -142,9 +142,13 @@
             const button1 = document.createElement("button");
             button1.textContent = "제거하기";
             input.value = "";
+            //이렇게 나오게 만들어야함
+            //key              value
+            //arr             [{id:0,data:"input",check:true false}]
+            //id                number
             button1.className = "bt1";
             document.body.append(div1);
-            div1.append(checkbox, span);
+            div1.append(checkbox, span, button1);
             div1.className = "div1";
 
             //체크박스 체크했을때 할일에 줄그어지는부분
@@ -162,16 +166,6 @@
               } else {
                 alert("박스를 체크하세요.");
               }
-              div1.addEventListener("mouseover", (event) => {
-                if (event) {
-                  div1.append(button1);
-                }
-              });
-              div1.addEventListener("mouseout", (event) => {
-                if (event) {
-                  div1.removeChild(button1);
-                }
-              });
             });
             //전체 삭제 기능
             button2.addEventListener("click", (event) => {
