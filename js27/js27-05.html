@@ -7,9 +7,12 @@
     <title>할일 목록 만들기</title>
     <style>
       .head {
-        font-size: 50px;
+        font-size: 30px;
         color: powderblue;
         text-align: center;
+
+        justify-content: center;
+        align-items: center;
       }
       .bt0 {
         background-color: cornflowerblue;
@@ -20,6 +23,7 @@
         color: white;
       }
       .text {
+        width: 90%;
         padding: 10px;
         border-radius: 20px;
         background-color: beige;
@@ -27,6 +31,7 @@
         font-weight: bold;
         font-size: 30px;
         justify-content: center;
+        align-items: center;
       }
       .bt2 {
         background-color: cornflowerblue;
@@ -62,35 +67,19 @@
         text-align: center;
         align-items: center;
         background-color: bisque;
-        width: 400px;
+        width: 100%;
         height: auto;
         display: flex;
         margin: 0 auto;
         border-radius: 10px;
       }
       .div {
+        /* max-width: 900px; */
         justify-content: center;
         text-align: center;
       }
       .div1:hover {
         background-color: darksalmon;
-      }
-      @keyframes slidein {
-        from {
-          margin-left: 50%;
-          width: 30%;
-        }
-
-        to {
-          margin-left: 0%;
-          width: 100%;
-        }
-      }
-      .div1 {
-        animation-duration: 3s;
-        animation-name: slidein;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
       }
     </style>
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
@@ -125,6 +114,7 @@
 
         /*추가하기 동작 1단계*/
         let ct = 0;
+
         button.addEventListener("click", (event) => {
           if (input.value) {
             const div1 = document.createElement("div");
@@ -141,7 +131,9 @@
 
             const button1 = document.createElement("button");
             button1.textContent = "제거하기";
+            button1.style.display = "none";
             input.value = "";
+
             //이렇게 나오게 만들어야함
             //key              value
             //arr             [{id:0,data:"input",check:true false}]
@@ -158,6 +150,13 @@
               span.style.textDecoration = event.target.checked
                 ? " line-through"
                 : "";
+              span.textContent = "할일완료!!";
+
+              if (checkbox.checked) {
+                button1.style.display = "inline-block";
+              } else {
+                button1.style.display = "none";
+              }
             });
             //체크를 해야만 삭제 하기 기능 동작
             button1.addEventListener("click", (event) => {
