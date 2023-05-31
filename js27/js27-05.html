@@ -114,19 +114,10 @@
 
         /*추가하기 동작 1단계*/
         let ct = 0;
+        const arr = [];
 
         button.addEventListener("click", (event) => {
           // const id = ++ct;
-          const arr = {
-            id: 0,
-            data: input.value,
-          };
-          localStorage.setItem("arr", JSON.stringify(arr));
-
-          // arr.push({
-          //   id: id,
-          //   data: input.value,
-          // });
 
           if (input.value) {
             const div1 = document.createElement("div");
@@ -145,11 +136,10 @@
             button1.textContent = "제거하기";
             button1.style.display = "none";
 
-            // const arr1 = localStorage.getItem("arr");
-            // console.log(arr1);
+            arr.push({ id: ct++, data: input.value, check: checkbox.checked });
 
+            localStorage.setItem("id", JSON.stringify(arr));
             input.value = "";
-
             //이렇게 나오게 만들어야함
             //key              value
             //arr             [{id:0,data:"input",check:true false}]
@@ -166,7 +156,7 @@
               span.style.textDecoration = event.target.checked
                 ? " line-through"
                 : "";
-              span.textContent = "할일완료!!";
+              span.textContent = "완료!!";
 
               if (checkbox.checked) {
                 button1.style.display = "inline-block";
