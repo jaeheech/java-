@@ -117,8 +117,6 @@
         const arr = [];
 
         button.addEventListener("click", (event) => {
-          // const id = ++ct;
-
           if (input.value) {
             const div1 = document.createElement("div");
             const checkbox = document.createElement("input");
@@ -140,10 +138,7 @@
 
             localStorage.setItem("id", JSON.stringify(arr));
             input.value = "";
-            //이렇게 나오게 만들어야함
-            //key              value
-            //arr             [{id:0,data:"input",check:true false}]
-            //id                number
+
             button1.className = "bt1";
             document.body.append(div1);
             div1.append(checkbox, span, button1);

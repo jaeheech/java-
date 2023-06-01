@@ -5,7 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style></style>
+    <style>
+      body {
+        justify-content: center;
+        text-align: center;
+      }
+      h1 {
+        font-size: 30px;
+        color: powderblue;
+        text-align: center;
+
+        justify-content: center;
+        align-items: center;
+      }
+
+      .bt0 {
+        background-color: cornflowerblue;
+        font-size: 20px;
+        border-radius: 10px;
+        padding: 5px;
+        color: white;
+        text-align: center;
+      }
+      .bt2 {
+        background-color: cornflowerblue;
+        font-size: 20px;
+        padding: 5px;
+        border-radius: 10px;
+        color: red;
+        text-align: center;
+      }
+      .text {
+        width: 90%;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: beige;
+        color: lightpink;
+        font-weight: bold;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+      }
+      .ediv {
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        background-color: bisque;
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 0 auto;
+        border-radius: 10px;
+      }
+      .espan {
+        font-weight: bold;
+        font-size: 25px;
+        color: black;
+      }
+      .ebutton {
+        background-color: cornflowerblue;
+        font-size: 20px;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+        color: white;
+      }
+    </style>
     <script>
       /*저장 하는 함수 */
       function localSave(edata) {
@@ -27,7 +94,9 @@
         const einput = document.createElement("input");
         const espan = document.createElement("span");
         const ebutton = document.createElement("button");
-
+        ediv.className = "ediv";
+        espan.className = "espan";
+        ebutton.className = "ebutton";
         /* 방법1 */
         // einput.setAttribute("type", "checkbox")
         // einput.setAttribute("id", i${id})
@@ -56,16 +125,20 @@
           edata[fck].check = e.currentTarget.checked;
           localSave(edata);
         });
-
+        // ediv.remove()
         ebutton.addEventListener("click", (e) => {
-          if (e.currentTarget) ediv.remove();
           const fid = edata.findIndex((v) => {
             return v.id === id; //매개변수로 입력받은것과 같은 id값을 찾음
           });
           console.log(fid); // 인덱스 번호 확인
           edata.splice(fid, 1); // 배열속에 찾은 인덱스 번호 삭제
-          location.reload();
+          // location.reload();
           localSave(edata);
+          if (einput.checked) {
+            ediv.remove();
+          } else {
+            alert("박스를 체크하세요.");
+          }
         });
 
         const getDiv = document.querySelector("div");
@@ -80,7 +153,13 @@
         const button = document.createElement("button");
         const clear = document.createElement("button");
         const div = document.createElement("div");
+
+        div.className = "div1";
+        input.className = "text";
+        button.className = "bt0";
+        clear.className = "bt2";
         document.body.append(h1, input, button, clear, div);
+
         h1.innerHTML = "할 일 목록";
         button.innerHTML = "추가하기";
         clear.innerHTML = "삭제하기";

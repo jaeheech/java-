@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>음수 사용 에러</title>
+    <script>
+      class Rectengle {
+        constructor(width, height) {
+          this.width = width;
+          this.height = height;
+        }
+        getPerimeter() {
+          return 2 * (this.width + this.height);
+        }
+        getArea() {
+          return this.width * this.height;
+        }
+      }
+      class Square extends Rectengle {
+        constructor(length) {
+          super(length, length); // 부모의 생성자 함수를 호출하는 코드입니다.
+        }
+      }
+
+      const square = new Square(-10);
+      console.log(`정사각형의 둘레: ${square.getPerimeter()}`);
+      console.log(`정사각형의 넓이: ${square.getArea()}`);
+    </script>
+  </head>
+  <body></body>
+</html>

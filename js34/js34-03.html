@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Rectengle {
+        constructor(width, height) {
+          this.width = width;
+          this.height = height;
+        }
+        //둘레를 구하는 메소드
+        getPermiter() {
+          return 2 * (this.width + this.height);
+        }
+        getArea() {
+          return this.width * this.height;
+        }
+      }
+      const rectangle = new Rectengle(10, 20);
+      console.log(`사각형의 둘레 : ${rectangle.getPermiter()}`);
+      console.log(`사각형의 넓이 : ${rectangle.getArea()}`);
+    </script>
+  </head>
+  <body></body>
+</html>
