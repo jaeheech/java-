@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      .content {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #About {
+        background-color: red;
+      }
+      #Products {
+        background-color: darkorange;
+      }
+      #Technology {
+        background-color: gold;
+      }
+      #Downloads {
+        background-color: green;
+      }
+      #Etc {
+        background-color: blue;
+      }
+      .div1 {
+        text-align: center;
+      }
+      .nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+      }
+      .ab,
+      .pr,
+      .te,
+      .dl,
+      .et {
+        font-size: 1.2rem;
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const nav = document.createElement("div");
+        const ab = document.createElement("div");
+        const pr = document.createElement("div");
+        const te = document.createElement("div");
+        const dl = document.createElement("div");
+        const et = document.createElement("div");
+        document.body.appendChild(nav).append(ab, pr, te, dl, et);
+        nav.className = "nav";
+        ab.innerHTML = "About";
+        pr.innerHTML = "Products";
+        te.innerHTML = "Technology";
+        dl.innerHTML = "Downloads";
+        et.innerHTML = "Etc";
+
+        ab.className = "ab";
+        pr.className = "pr";
+        te.className = "te";
+        dl.className = "dl";
+        et.className = "et";
+
+        const [About, Products, Technology, Downloads, Etc] =
+          document.querySelectorAll("body>div");
+        // function nomal() {
+        //   document.body.appendChild(About);
+        //   Products.remove();
+        //   Technology.remove();
+        //   Downloads.remove();
+        //   Etc.remove();
+        //   setTimeout(red, 1 * 1000);
+        // }
+        function red() {
+          document.body.append(About);
+          ab.style.backgroundColor = "red";
+          et.style.backgroundColor = "black";
+          Products.remove();
+          Technology.remove();
+          Downloads.remove();
+          Etc.remove();
+          setTimeout(orange, 1 * 1000);
+        }
+        function orange() {
+          ab.style.backgroundColor = "black";
+          pr.style.backgroundColor = "darkorange";
+          document.body.appendChild(Products);
+          About.parentNode.removeChild(About);
+          //   Technology.parentNode.removeChild(Technology);
+          //   Downloads.parentNode.removeChild(Downloads);
+          //   Etc.parentNode.removeChild(Etc);
+          setTimeout(yel, 1 * 1000);
+        }
+        function yel() {
+          pr.style.backgroundColor = "black";
+          te.style.backgroundColor = "gold";
+
+          document.body.appendChild(Technology);
+          //   About.parentNode.removeChild(About);
+          Products.parentNode.removeChild(Products);
+          //   Downloads.parentNode.removeChild(Downloads);
+          //   Etc.parentNode.removeChild(Etc);
+          setTimeout(gre, 1 * 1000);
+        }
+        function gre() {
+          te.style.backgroundColor = "black";
+          dl.style.backgroundColor = "green";
+          document.body.appendChild(Downloads);
+          //   About.parentNode.removeChild(About);
+          //   Products.parentNode.removeChild(Products);
+          Technology.parentNode.removeChild(Technology);
+          //   Etc.parentNode.removeChild(Etc);
+          setTimeout(blu, 1 * 1000);
+        }
+        function blu() {
+          dl.style.backgroundColor = "black";
+          et.style.backgroundColor = "blue";
+          document.body.appendChild(Etc);
+          //   About.parentNode.removeChild(About);
+          //   Products.parentNode.removeChild(Products);
+          //   Technology.parentNode.removeChild(Technology);
+          Downloads.parentNode.removeChild(Downloads);
+          setTimeout(red, 1 * 1000);
+        }
+        red();
+      });
+    </script>
+  </head>
+  <body>
+    <body>
+      <div id="About" class="content">
+        <h1>About</h1>
+        <p>Custom Software Development Company</p>
+      </div>
+
+      <div id="Products" class="content">
+        <h1>Products</h1>
+        <p>
+          Building tailored software to address critical needs of global
+          enterprises.
+        </p>
+      </div>
+
+      <div id="Technology" class="content">
+        <h1>Technology</h1>
+        <p>Machine Learning, Artificial Intelligent, Cloud Platform.</p>
+      </div>
+
+      <div id="Downloads" class="content">
+        <h1>Downloads</h1>
+        <p>You can download a free 10 days trial.</p>
+      </div>
+
+      <div id="Etc" class="content">
+        <h1>Etc</h1>
+        <p>Everything is fine.</p>
+      </div>
+    </body>
+  </body>
+</html>
